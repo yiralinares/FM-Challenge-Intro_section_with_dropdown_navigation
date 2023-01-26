@@ -1,11 +1,82 @@
-header, nav ul, .login ul {
+:root {
+    --black: hsl(0, 0%, 8%);
+    --gray: hsl(0, 0%, 41%);
+    --white: hsl(0, 0%, 98%);
+}
+
+/*BOILERPLATE*/
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.125rem;
+}
+
+/*HEADER*/
+
+header, nav ul, .login, .nav {
     display: flex;
 }
 
-nav a, .login a {
+header {
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 5rem);
+    margin: 0 auto;
+}
+
+.nav {
+    align-items: center;
+}
+
+
+a {
     text-decoration: none;
+    color: var(--gray);
+    font-size: 1rem;
 }
 
 ul {
     list-style-type: none;
 }
+
+nav ul {
+    gap: 2.5rem;;
+}
+
+.login {
+    gap: 2rem;
+}
+
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1980px) {
+    
+    header {
+        padding: 1rem 0;
+        width: calc(100% - 5rem);
+    }
+
+    .hidden {
+        display: inherit;
+    }
+    .menu {
+        display: none;
+    }
+}
+
